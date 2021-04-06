@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>George and Jude's presentation</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/logo.jpeg" rel="icon">
+  <link href="img/logo.jpeg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto"><img src="img/logo.jpeg" alt=""></a>
+      <a href="index.html" class="logo me-auto"><img src="img/download.png" alt=""></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Introduction</a></li>
+          <li><a class="nav-link scrollto" href="#counts">Description  of the  model</a></li>
+          <li><a class="nav-link scrollto" href="#services">Discussion of results</a></li>
+          <li><a class="nav-link scrollto" href="#George">Modifications and implematation</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Discussions of our own results </a></li>
+          <li><a class="nav-link scrollto" href="#contact">Further research  </a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(img/slide/3.jpg)">
+          <div class="container">
+            <h2>Welcome to Our<span> Differential Equations and Numerical methods Presentation</span></h2>
+            <p> we will we presenting on a Prey-predator Model with Infection in Both Prey and Predator, we will analysis their model and results and how we could modify this model to come up with a more accurate results</p>
+            <a href="https://www.jstor.org/stable/24898338" class="btn-get-started scrollto">Read this paper</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(img/slide/2.jpg)">
+          <div class="container">
+            <h2>Prey and Predator Populations</h2>
+            <p> 1. In the absence of predator population and with no disease, the prey population grows logistically
+              with intrinsic growth rate r and environmental carrying capacity K(K > 0).
+              </p>
+              <p>2. In presence of the disease in prey, the infected prey population contributes to the susceptible prey
+                population growth towards the carrying capacity K(K > 0)</p>
+            <a href="https://www.jstor.org/stable/24898338" class="btn-get-started scrollto">Read this paper</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(img/slide/1.jpg)">
+          <div class="container">
+            <h2>Predation</h2>
+            <p>Predation is a necessity in the ecosyestem to help keep a balance ecosyestemand also help by controlling the size of prey populations,help slow down the spread of disease and also
+              ensure the survival and success of healthy prey animals due to suggle for food.</p>
+            <a href="https://www.jstor.org/stable/24898338" class="btn-get-started scrollto">Read this paper</a>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <!-- <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="fas fa-thermometer"></i></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>End Featured Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Introduction</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="img/prey.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <p>Interactions between predators and prey are a significant evolutionary driving force. Animals have developed a wide range of strategies in order to maximize their 
+              chances of success. Avoiding a predator experience by reducing spatial or temporal overlap is the single most successful way to ensure survival. 
+              This paper aims to study the dynamical behaviours of a prey-predator system where both prey
+            and predator populations are affected by diseases .</p>
+            <p><strong>Numerous mathematical models have been developed and these models have become essential tools in analyzing the 
+              interaction of different populations,particularly the interaction between prey and predator.</strong> </p>
+            <p class="font-italic"><strong>
+              These Models were created based on some assumptions and below are some of these models.
+            </strong>
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Hadeler and Freedman considered the prey-predator model
+                 in which predation is more likely on infected prey.</li>
+              <li><i class="bi bi-check-circle"></i> Anderson and May discussed a model where the
+                influence of epidemics on predation was first studied.</li>
+              <li><i class="bi bi-check-circle"></i> Haque and Venturino discussed models of diseases spreading in symbiotic communities.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="section-title">
+          <h2>relevance of the paper</h2>
+        </div>
+        <p>Parasite infection in the prey and predator populations is
+          an issue which cannot be ignored, and also it has an important role in regulating population sizes. There
+          are numerous field evidences where the prey and the predator are infected by parasites.Thus, reality dictates that, we should be concerned with
+          prey-predator systems, where both the populations are disease affected.</p>
+      </div>
+    </section> <!-- End About Us Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Description  of the  model</h2>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="text-center">
+            <h4>Below are some of the Assumptions for this model</h4>
+          </div>
+          
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="fab fa-searchengin"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="2" class="purecounter"></span>
+
+              <p>1. Only the <strong>susceptible prey</strong> can reproduce. They further assume that the predator population have a natural death, whereas the infected population
+                have a disease induce excess death rate also.</p>
+              <p>2. In the absence of predator population and with no disease, the prey population grows logistically
+                with intrinsic growth rate r and environmental carrying capacity K(K > 0).</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="fab fa-searchengin"></i>
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="3" class="purecounter"></span>
+              <p>The disease spreads among the susceptible prey when it comes in contact with the infected one. The
+                prey, once became infected, never recovers. It will either die or will be removed by predation</p>
+                <p>In presence of the disease in prey, the infected prey population contributes to the susceptible prey
+                  population growth towards the carrying capacity K(K > 0).</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="fab fa-searchengin"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="4" class="purecounter"></span>
+              <p> The infected predators are unfit to be able to catch a healthy prey, and as such a
+                healthy prey is caught by a healthy predator only. But an infected prey, being weak and more vulnerable,
+                is available for predation by both susceptible and infected predators</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="fab fa-searchengin"></i>
+              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="5" class="purecounter"></span>
+              <p>The disease spread over predator population by direct contact with an infected predator. An infected
+                predator never becomes recovered or immune–it remains infected or dies out.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+            <div class="icon-box mt-5 mt-lg-0">
+              <p>This model consists of two populations: the prey population and the predator population.
+                Both the populations have two sub classes: susceptible and infected. At time T, let S(T) denotes the density
+                of the susceptible prey, and I(T) denotes the density of the infected prey. The susceptible and infected
+                predator densities are denoted by X(T) and Y(T), respectively. <strong>Using the assumptions above,the paper came 
+                  out with the following parameters</strong> </p>
+            </div>
+            <div class="icon-box mt-5">
+              <p> the parameter a1 is the infection rate for prey population, b1 is the predation rate of susceptible prey by
+                healthy predators. The infected prey population has a disease induced death d1. f1 and m1 are respectively
+                the predation rate of infected prey by susceptible and infected predators. The parameters c1 and 11 are
+                the conversion rates for healthy and infected preys to healthy predator. δ1 is the natural death rate for the
+                predator population. The infected predator population has a disease induced death rate α1. We have taken
+                e1 as the infection rate for predator population and n1 as the conversion rate for infected prey to infected
+                predator. We make an obvious assumption that all the parameters are positive.
+              </p> 
+              <P><strong>Figure 1</strong> shows the model we came up with to describe the relationship between S, I, X and Y.</P>
+              
+            </div>
+          </div>
+          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("img/model.jpg");' data-aos="zoom-in" ></div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+        <!-- ======= Features Section ======= -->
+        <section id="feat" class="features">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+                <div class="icon-box mt-5 mt-lg-0">
+                  <img src="img/10.jpg" alt="" style="height: 60%;width: 60%;">
+                  <p>The model we have just specified has thirteen parameters, which makes analysis difficult. To reduce
+                    the number of parameters and to determine which combinations of parameters control the behavior of the
+                    system, the authors non-dimensionalized the system and came up with the following four(4) equations</p>
+                </div>
+                <div class="icon-box mt-5">
+                  <img src="img/11.jpg" alt=""style="height: 60%;width: 60%;">
+                </div>
+              </div>
+              <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("img/you.jpg");' data-aos="zoom-in"></div>
+            </div>
+    
+          </div>
+        </section><!-- End Features Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Discussion of results</h2>
+          <p> <h5>Most of the graphs are not visible here but they can be found in the <a href="#gallery">gallery</a> where they are more visible</h5></p>
+          <p> The paper analyzes the stability of the different equillibrium points for the prey-predator model with different parameters and inital conditions
+            We were able to plot some of the graphs and compared them to those in the paper. The results are consistent with those presented in the data.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
+            <img src="img/1.png" alt="" style="height: 60%;width: 60%;">
+            <p class="description">For a = 0.4, b = 1, c = 0.1, d = 0.5, e = 0.2, f = 0.2, 1 = 0.15, m = 1.5, n = 1.4, α = 0.5, δ = 0.2 and
+              (s(0), i(0), x(0), y(0)) = (0.5, 0.5, 0.5, 0.5), E1(1, 0, 0, 0) is locally asymptotically stable.</p>
+          </div>
+          
+
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
+            <img src="img/2.png" alt=""style="height: 60%;width: 60%;">
+            <p class="description">For a = 0.4, b = 1, c = 0.5, d = 0.5, e = 0.2, f = 0.2, 1 = 0.15, m = 1.5, n = 1.4, α = 0.5, δ = 0.4 and
+              (s(0), i(0), x(0), y(0)) = (0.5, 0.5, 0.5, 0.5), E2(0.8, 0, 0.2, 0) is locally asymptotically stable</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
+            <img src="img/3.png" alt="" style="height: 60%;width: 60%;">
+            <p class="description">If a = 0.4, b = 1, c = 0.1, d = 0.1, e = 0.2, f = 0.2, 1 = 0.15, m = 1.5, n = 1.4, α = 0.8, δ = 0.4 and
+              (s(0), i(0), x(0), y(0)) = (0.5, 0.6, 0.5, 0.2) then E3(0.25, 0.5357, 0, 0) is locally asymptotically stable.              
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
+            <img src="img/4.png" alt="" style="height: 60%;width: 60%;">
+            <p class="description">Here a = 0.4, b = 1, c = 1, d = 0.1, e = 1.2, f = 0.6, 1 = 0.4, m = 1.5, n = 1.4, α = 0.3, δ = 0.2 and
+              (s(0), i(0), x(0), y(0)) = (0.5, 0.2, 0.5, 0.5). The figure shows that E5(0.75, 0, 0.25, 0.4583) is locally asymptotically
+              stable. </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
+            <img src="img/7.png" alt="" style="height: 60%;width: 60%;">
+            <p class="description">Here a = 1.9, b = 1.2, c = 0.8, d = 0.2, e = 0.2, f = 0.2, 1 = 0.15, m = 1.5, n = 1.4, α = 0.3, δ = 0.2 and
+              s(0) = 0.5, i(0) = 0.2, x(0) = 0.5, y(0) = 0.5. It shows that E∗
+              is locally asymptotically stable and s, i, x, y approach
+              their equilibrium values s∗ = 0.2568, i∗ = 0.1921, x∗ = 0.1550, y∗ = 0.1713 in finite time.
+              
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon"><i class="fas fa-link"></i><i class="fas fa-notes-link"></i></div>
+            <h4 class="title"><a href="img/prey_predator_equations.m">click here to download the matlab file</a></h4>
+            <h4 class="title"><a href="img/prey.pdf">click here to access pdf file of the code</a></h4>
+            <p class="description">Kindly click on the links above to access the matlab code for the model. Thank you</p>
+          </div>
+        </div>
+        <div class="section-title">
+          <h2>Implications</h2>
+        </div>
+        <p class="description">From the graphs seen above, the prey population increases food for predators. However, the increase in the infected population
+          moderates the population of the susceptible prey and predator.This relationship continues in different waves until an equillibrium point is reached. 
+          
+         The function <strong>E(s*,i*,x*,y*)</strong> represents that point at which all the populations are constant.
+          At the equilibrium point, the rate at which susceptible prey become infected and also infected preys die will be constant. The same will happen
+      for the predator population. And the natural death rate will also be constant.Therefore the ecosystem will be stable will the rate of death for both populations
+      and, the growth rate and also the rate of infection will be constant throughout. </p>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <!-- <section id="appointment" class="appointment section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Make an Appointment</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <form action="forms/appointment.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="department" id="department" class="form-select">
+                <option value="">Select Department</option>
+                <option value="Department 1">Department 1</option>
+                <option value="Department 2">Department 2</option>
+                <option value="Department 3">Department 3</option>
+              </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Doctor</option>
+                <option value="Doctor 1">Doctor 1</option>
+                <option value="Doctor 2">Doctor 2</option>
+                <option value="Doctor 3">Doctor 3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Make an Appointment</button></div>
+        </form>
+
+      </div>
+    </section>End Appointment Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Department</h2>   
+          </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                  <h4>Engineering</h4>
+                  <p>The Engineering Department at Ashesi</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <h3>Engineering Department</h3>
+                <img src="img/block.jpg" alt="" class="img-fluid">
+                <p>The engineers tasked to solve society's problems have to be entrepreneurs who can see through challenges and build solutions. 
+                  They must be ethical and responsible, and see the short and long term effects of their decisions on society and the environment. 
+                  They also have to be leaders who can communicate their ideas and work with teams to solve problems. Ashesi’s Engineering Department is 
+                  driven by a mission to train such engineers. </p> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>     End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>End testimonial item -->
+
+          <!-- </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>End Testimonials Section -->
+
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Faculty</h2>
+          <p><h3>The effort you put into helping us get this far can never be unmatched. We want to say a very sincere thank you to all.</h3></p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="img/DrElena.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/elena-rosca-363b242/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rosca, Elena V. (Ph.D.)</h4>
+                <span>Senior Lecturer</span>
+                <a href="https://www.ashesi.edu.gh/academics/computer-science/faculty-pages-cs/2203-faculty-rosca-elena-v.html" class="btn-get-started scrollto">
+                  Learn more about Dr. Rosca</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="img/DrNathan.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/nathan-amanquah-1a499323/?external_page=LPC.Immersive&external_control=ViewProfileLink&external_app_instance=32c9e762-1f0a-4604-9ef5-d0b0b1c525ba&external_page_instance=397ea0ff-3da7-481a-aea3-1a0cb5bf4999">
+                    <i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Dr. Nathan Amanquah</h4>
+                <span>Head of Department & Senior Lecturer</span>
+                <a href="https://www.ashesi.edu.gh/academics/programmes/engineering/engineering-people/3263-nathan-amanquah.html" class="btn-get-started scrollto">
+                  Learn more about Dr. Amanquah </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="img/Theodorafi.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/theodora-mate-kole/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Theodora Mate - Kole</h4>
+                <span>Faculty Intern</span>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>Cardiology</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Neurosurgeon</span>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+
+      </div>
+    </section><!-- End Doctors Section -->
+
+  
+    <section id="gallery" class="gallery">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Below are some of the graphs from the model, when some of the parameter are uttered</p>
+        </div>
+
+        <div class="gallery-slider swiper-container">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="gallery-lightbox" href="img/1.png"><img src="img/1.png" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="img/2.png"><img src="img/2.png" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="img/3.png"><img src="img/3.png" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="img/4.png"><img src="img/4.png" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="img/7.png"><img src="img/7.png" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="img/web.jpg"><img src="img/web.jpg" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="box" data-aos="fade-up" data-aos-delay="100">
+              <h3>Free</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+            <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+              <h3>Business</h3>
+              <h4><sup>$</sup>19<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+              <h3>Developer</h3>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li>Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="400">
+              <span class="advanced">Advanced</span>
+              <h3>Ultimate</h3>
+              <h4><sup>$</sup>49<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li>Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questioins</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <ul class="faq-list">
+
+          <li>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+      </div>
+
+      <div>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com<br>contact@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col form-group mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <!-- <div class="container">
+        <div class="row"> -->
+
+          <!-- <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Medicio</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div> -->
+
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Minyillah George Mensah</span></strong> <img src="img/logo.jpeg" alt="" style="height: 3%;width: 3%;">. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ 
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/purecounter/purecounter.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
